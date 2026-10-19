@@ -3,104 +3,168 @@
 @section('title', 'Kho sách thư viện')
 
 @section('content')
-<!-- Hero Header Section -->
-<section class="hero-section">
-    <div class="hero-pattern"></div>
-    <div class="container position-relative" style="z-index: 1;">
-        <div class="row align-items-center gy-4">
-            <div class="col-lg-8">
-                <div class="hero-eyebrow mb-3">
-                    <i class="bi bi-stars" aria-hidden="true"></i>
-                    <span>Hệ thống Quản lý Thư viện Số</span>
-                </div>
-                <h1 class="display-6 fw-bold mb-3 text-white lh-sm">
-                    Khám phá kho tri thức &amp; tài liệu học thuật
-                </h1>
-                <p class="lead text-white-50 mb-4" style="max-width: 650px;">
-                    Tra cứu hàng ngàn đầu sách giáo trình, tài liệu tham khảo và văn học theo tên sách, tác giả hoặc nhà xuất bản với dữ liệu tồn kho theo thời gian thực.
-                </p>
-                
-                <div class="d-flex flex-wrap gap-2">
-                    <div class="hero-stats-badge">
-                        <i class="bi bi-book text-warning"></i>
-                        <span>Kho sách phong phú</span>
-                    </div>
-                    <div class="hero-stats-badge">
-                        <i class="bi bi-tags text-info"></i>
-                        <span>{{ count($theLoais) }} thể loại chuyên ngành</span>
-                    </div>
-                    <div class="hero-stats-badge">
-                        <i class="bi bi-shield-check text-success"></i>
-                        <span>Kiểm soát mượn trả tự động</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Floating Search Panel -->
-<div class="container">
-    <div class="search-panel p-3 p-md-4">
-        <form id="catalog-search" action="{{ route('catalog.index', [], false) }}" method="GET" class="row g-3 align-items-end">
-            <div class="col-md-6 col-lg-7">
-                <label for="q" class="form-label fw-semibold text-dark small mb-1">
-                    <i class="bi bi-search me-1 text-primary"></i> Tìm kiếm tài liệu
-                </label>
-                <div class="input-icon-group">
-                    <span class="input-icon">
-                        <i class="bi bi-search"></i>
-                    </span>
-                    <input type="search" 
-                           class="form-control" 
-                           id="q" 
-                           name="q" 
-                           value="{{ $keyword }}" 
-                           placeholder="Nhập tên sách, tác giả, nhà xuất bản..." 
-                           autocomplete="off">
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-3">
-                <label for="the_loai_id" class="form-label fw-semibold text-dark small mb-1">
-                    <i class="bi bi-filter me-1 text-primary"></i> Phân loại thể loại
-                </label>
-                <select class="form-select" id="the_loai_id" name="the_loai_id">
-                    <option value="">Tất cả thể loại</option>
-                    @foreach ($theLoais as $theLoai)
-                        <option value="{{ $theLoai->id }}" @selected($theLoaiId === $theLoai->id)>{{ $theLoai->ten_the_loai }}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="col-md-2 d-grid">
-                <button class="btn btn-primary" type="submit">
-                    <i class="bi bi-search me-1"></i> Tìm kiếm
-                </button>
-            </div>
-        </form>
-    </div>
-
-    <!-- Book Grid Section -->
-    <section class="py-5">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-4 pb-2 border-bottom">
+@auth
+    <!-- Authenticated Workstation Catalog View -->
+    <div class="container-fluid px-0">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
             <div>
                 <div class="section-label">
-                    <i class="bi bi-collection me-1"></i> Danh mục tra cứu
+                    <i class="bi bi-grid-fill me-1"></i> Kho sách thư viện
                 </div>
-                <h2 class="page-heading h4 mb-0">Sách hiện có trong thư viện</h2>
+                <h1 class="page-heading h3 mb-1">Tra cứu tài liệu &amp; Giáo trình</h1>
+                <p class="text-muted small mb-0">Tra cứu nhanh đầu sách, tác giả, thể loại với dữ liệu tồn kho theo thời gian thực.</p>
             </div>
-            <div class="d-flex align-items-center gap-2">
-                <span class="badge badge-subtle-primary rounded-pill py-2 px-3 fw-semibold">
-                    <i class="bi bi-journal-check me-1"></i>
-                    <strong id="catalog-total">{{ $saches->total() }}</strong> kết quả
-                </span>
+            <span class="badge badge-subtle-primary rounded-pill py-2 px-3 fw-semibold">
+                <i class="bi bi-journal-check me-1"></i>
+                <strong id="catalog-total">{{ $saches->total() }}</strong> kết quả
+            </span>
+        </div>
+
+        <!-- Filter / Search Card -->
+        <div class="card mb-4">
+            <div class="card-body p-3 p-md-4">
+                <form id="catalog-search" action="{{ route('catalog.index', [], false) }}" method="GET" class="row g-3 align-items-end">
+                    <div class="col-md-6 col-lg-7">
+                        <label for="q" class="form-label fw-semibold text-dark small mb-1">
+                            <i class="bi bi-search me-1 text-primary"></i> Tìm kiếm tài liệu
+                        </label>
+                        <div class="input-icon-group">
+                            <span class="input-icon">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="search" 
+                                   class="form-control" 
+                                   id="q" 
+                                   name="q" 
+                                   value="{{ $keyword }}" 
+                                   placeholder="Nhập tên sách, tác giả, nhà xuất bản..." 
+                                   autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        <label for="the_loai_id" class="form-label fw-semibold text-dark small mb-1">
+                            <i class="bi bi-filter me-1 text-primary"></i> Phân loại thể loại
+                        </label>
+                        <select class="form-select" id="the_loai_id" name="the_loai_id">
+                            <option value="">Tất cả thể loại</option>
+                            @foreach ($theLoais as $theLoai)
+                                <option value="{{ $theLoai->id }}" @selected($theLoaiId === $theLoai->id)>{{ $theLoai->ten_the_loai }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-md-2 d-grid">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search me-1"></i> Tìm kiếm
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
 
+        <!-- Book Grid Section -->
         <div id="catalog-results" aria-live="polite">
             @include('catalog.partials.book-grid', ['saches' => $saches])
         </div>
+    </div>
+@else
+    <!-- Guest Public View with Welcoming Hero -->
+    <section class="hero-section">
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-8">
+                    <div class="hero-eyebrow mb-3">
+                        <i class="bi bi-stars" aria-hidden="true"></i>
+                        <span>Hệ thống Quản lý Thư viện Số</span>
+                    </div>
+                    <h1 class="display-6 fw-bold mb-3 text-white lh-sm">
+                        Khám phá kho tri thức &amp; tài liệu học thuật
+                    </h1>
+                    <p class="lead text-white-50 mb-4" style="max-width: 650px;">
+                        Tra cứu hàng ngàn đầu sách giáo trình, tài liệu tham khảo và văn học theo tên sách, tác giả hoặc nhà xuất bản với dữ liệu tồn kho theo thời gian thực.
+                    </p>
+                    
+                    <div class="d-flex flex-wrap gap-2">
+                        <div class="hero-stats-badge">
+                            <i class="bi bi-book text-warning"></i>
+                            <span>Kho sách phong phú</span>
+                        </div>
+                        <div class="hero-stats-badge">
+                            <i class="bi bi-tags text-info"></i>
+                            <span>{{ count($theLoais) }} thể loại chuyên ngành</span>
+                        </div>
+                        <div class="hero-stats-badge">
+                            <i class="bi bi-shield-check text-success"></i>
+                            <span>Kiểm soát mượn trả tự động</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-</div>
+
+    <!-- Floating Search Panel -->
+    <div class="container">
+        <div class="search-panel p-3 p-md-4">
+            <form id="catalog-search" action="{{ route('catalog.index', [], false) }}" method="GET" class="row g-3 align-items-end">
+                <div class="col-md-6 col-lg-7">
+                    <label for="q" class="form-label fw-semibold text-dark small mb-1">
+                        <i class="bi bi-search me-1 text-primary"></i> Tìm kiếm tài liệu
+                    </label>
+                    <div class="input-icon-group">
+                        <span class="input-icon">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="search" 
+                               class="form-control" 
+                               id="q" 
+                               name="q" 
+                               value="{{ $keyword }}" 
+                               placeholder="Nhập tên sách, tác giả, nhà xuất bản..." 
+                               autocomplete="off">
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <label for="the_loai_id" class="form-label fw-semibold text-dark small mb-1">
+                        <i class="bi bi-filter me-1 text-primary"></i> Phân loại thể loại
+                    </label>
+                    <select class="form-select" id="the_loai_id" name="the_loai_id">
+                        <option value="">Tất cả thể loại</option>
+                        @foreach ($theLoais as $theLoai)
+                            <option value="{{ $theLoai->id }}" @selected($theLoaiId === $theLoai->id)>{{ $theLoai->ten_the_loai }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-md-2 d-grid">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="bi bi-search me-1"></i> Tìm kiếm
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Book Grid Section -->
+        <section class="py-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-4 pb-2 border-bottom">
+                <div>
+                    <div class="section-label">
+                        <i class="bi bi-collection me-1"></i> Danh mục tra cứu
+                    </div>
+                    <h2 class="page-heading h4 mb-0">Sách hiện có trong thư viện</h2>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge badge-subtle-primary rounded-pill py-2 px-3 fw-semibold">
+                        <i class="bi bi-journal-check me-1"></i>
+                        <strong id="catalog-total">{{ $saches->total() }}</strong> kết quả
+                    </span>
+                </div>
+            </div>
+
+            <div id="catalog-results" aria-live="polite">
+                @include('catalog.partials.book-grid', ['saches' => $saches])
+            </div>
+        </section>
+    </div>
+@endauth
 @endsection
 
 @push('scripts')
@@ -113,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const category = document.getElementById('the_loai_id');
     let timer;
     let activeRequest;
+
+    if (!form || !results) return;
 
     const loadResults = async (url, updateHistory = true) => {
         activeRequest?.abort();
@@ -136,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
             results.innerHTML = data.html;
-            total.textContent = data.total;
+            if (total) total.textContent = data.total;
             if (updateHistory) {
                 window.history.replaceState({}, '', requestUrl.toString());
             }
@@ -179,14 +245,18 @@ document.addEventListener('DOMContentLoaded', () => {
         submitSearch();
     });
 
-    keyword.addEventListener('input', () => {
-        window.clearTimeout(timer);
-        timer = window.setTimeout(submitSearch, 300);
-    });
+    if (keyword) {
+        keyword.addEventListener('input', () => {
+            window.clearTimeout(timer);
+            timer = window.setTimeout(submitSearch, 300);
+        });
 
-    keyword.addEventListener('search', submitSearch);
+        keyword.addEventListener('search', submitSearch);
+    }
 
-    category.addEventListener('change', submitSearch);
+    if (category) {
+        category.addEventListener('change', submitSearch);
+    }
 
     results.addEventListener('click', (event) => {
         const link = event.target.closest('.pagination a');
@@ -198,8 +268,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('popstate', () => {
         const currentParams = new URLSearchParams(window.location.search);
-        keyword.value = currentParams.get('q') || '';
-        category.value = currentParams.get('the_loai_id') || '';
+        if (keyword) keyword.value = currentParams.get('q') || '';
+        if (category) category.value = currentParams.get('the_loai_id') || '';
         loadResults(window.location.href, false);
     });
 });

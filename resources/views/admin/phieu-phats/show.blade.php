@@ -3,25 +3,27 @@
 @section('title', 'Chi tiết phiếu phạt #PP-' . $phieuPhat->id)
 
 @section('content')
-<section class="py-4 py-lg-5">
-    <div class="container">
-        <!-- Breadcrumb & Navigation -->
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
-            <div>
-                <a href="{{ route('admin.phieu-phats.index') }}" class="btn btn-outline-secondary btn-sm mb-2">
-                    <i class="bi bi-arrow-left me-1"></i> Quay lại danh sách phiếu phạt
-                </a>
-                <h1 class="page-heading h3 mb-1">
-                    Phiếu phạt vi phạm #PP-{{ $phieuPhat->id }}
-                </h1>
-                <p class="text-muted small mb-0">Lập vào lúc: {{ $phieuPhat->created_at->format('d/m/Y H:i') }}</p>
-            </div>
-            <div class="d-flex gap-2">
-                <button type="button" class="btn btn-outline-secondary" onclick="window.print();">
-                    <i class="bi bi-printer me-1"></i> In biên lai phạt
-                </button>
-            </div>
+<div class="container-fluid px-0">
+    <!-- Breadcrumb & Navigation -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+        <div>
+            <nav aria-label="breadcrumb" class="mb-2">
+                <ol class="breadcrumb py-1 px-3 bg-white border rounded-2 shadow-sm small mb-0 d-inline-flex">
+                    <li class="breadcrumb-item"><a href="{{ route('admin.phieu-phats.index') }}">Quản lý phiếu phạt</a></li>
+                    <li class="breadcrumb-item active">#PP-{{ $phieuPhat->id }}</li>
+                </ol>
+            </nav>
+            <h1 class="page-heading h3 mb-1">
+                Phiếu phạt vi phạm #PP-{{ $phieuPhat->id }}
+            </h1>
+            <p class="text-muted small mb-0">Lập vào lúc: {{ $phieuPhat->created_at->format('d/m/Y H:i') }}</p>
         </div>
+        <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-secondary" onclick="window.print();">
+                <i class="bi bi-printer me-1"></i> In biên lai phạt
+            </button>
+        </div>
+    </div>
 
         <div class="row g-4">
             <!-- Left Column: Fine Details & Payment Confirmation -->
@@ -202,9 +204,8 @@
                             </table>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 @endsection

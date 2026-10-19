@@ -3,12 +3,14 @@
 @section('title', 'Chi tiết lượt mượn #'.$phieuMuon->id)
 
 @section('content')
-<section class="py-4 py-lg-5">
-    <div class="container" style="max-width: 900px;">
-        <!-- Back Navigation -->
-        <a href="{{ route('user.phieu-muons.index') }}" class="btn btn-link text-decoration-none text-muted px-0 mb-3 small d-inline-flex align-items-center gap-1">
-            <i class="bi bi-arrow-left"></i> Quay lại lịch sử mượn
-        </a>
+<div class="container-fluid px-0" style="max-width: 950px;">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb py-2 px-3 bg-white border rounded-2 shadow-sm small">
+            <li class="breadcrumb-item"><a href="{{ route('user.phieu-muons.index') }}">Lịch sử mượn sách</a></li>
+            <li class="breadcrumb-item active">Phiếu mượn #{{ $phieuMuon->id }}</li>
+        </ol>
+    </nav>
 
         <!-- Header -->
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
@@ -110,8 +112,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
-</section>
+</div>
 @endsection

@@ -3,35 +3,37 @@
 @section('title', 'Hồ sơ độc giả: ' . $user->name)
 
 @section('content')
-<section class="py-4 py-lg-5">
-    <div class="container">
-        <!-- Breadcrumb & Back -->
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
-            <div>
-                <a href="{{ route('admin.users.index') }}" class="btn btn-outline-secondary btn-sm mb-2">
-                    <i class="bi bi-arrow-left me-1"></i> Quay lại danh sách độc giả
-                </a>
-                <h1 class="page-heading h3 mb-1">
-                    Hồ sơ lý lịch: {{ $user->name }}
-                </h1>
-                <p class="text-muted small mb-0">Tham gia thư viện ngày: {{ $user->created_at->format('d/m/Y') }}</p>
-            </div>
-            <div class="d-flex gap-2">
-                @if ($lyLich['co_the_muon'])
-                    <a href="{{ route('admin.phieu-muons.create', ['user_id' => $user->id]) }}" class="btn btn-primary shadow-sm">
-                        <i class="bi bi-journal-plus me-1"></i> Lập phiếu mượn cho độc giả này
-                    </a>
-                @else
-                    <button class="btn btn-secondary" disabled title="{{ $lyLich['ly_do_khong_the_muon'] }}">
-                        <i class="bi bi-slash-circle me-1"></i> Không thể mượn sách lúc này
-                    </button>
-                @endif
-            </div>
+<div class="container-fluid px-0">
+    <!-- Breadcrumb & Back -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+        <div>
+            <nav aria-label="breadcrumb" class="mb-2">
+                <ol class="breadcrumb py-1 px-3 bg-white border rounded-2 shadow-sm small mb-0 d-inline-flex">
+                    <li class="breadcrumb-item"><a href="{{ route('admin.users.index') }}">Quản lý độc giả</a></li>
+                    <li class="breadcrumb-item active">{{ $user->name }}</li>
+                </ol>
+            </nav>
+            <h1 class="page-heading h3 mb-1">
+                Hồ sơ lý lịch: {{ $user->name }}
+            </h1>
+            <p class="text-muted small mb-0">Tham gia thư viện ngày: {{ $user->created_at->format('d/m/Y') }}</p>
         </div>
+        <div class="d-flex gap-2">
+            @if ($lyLich['co_the_muon'])
+                <a href="{{ route('admin.phieu-muons.create', ['user_id' => $user->id]) }}" class="btn btn-primary shadow-sm">
+                    <i class="bi bi-journal-plus me-1"></i> Lập phiếu mượn cho độc giả này
+                </a>
+            @else
+                <button class="btn btn-secondary" disabled title="{{ $lyLich['ly_do_khong_the_muon'] }}">
+                    <i class="bi bi-slash-circle me-1"></i> Không thể mượn sách lúc này
+                </button>
+            @endif
+        </div>
+    </div>
 
-        <!-- Reliability Credit Banner -->
-        <div class="card border shadow-sm mb-4 border-start border-{{ $lyLich['badge_class'] }} border-4">
-            <div class="card-body p-4">
+    <!-- Reliability Credit Banner -->
+    <div class="card mb-4 border-start border-{{ $lyLich['badge_class'] }} border-4">
+        <div class="card-body p-4">
                 <div class="row align-items-center gy-3">
                     <div class="col-md-7">
                         <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
@@ -329,5 +331,5 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 @endsection

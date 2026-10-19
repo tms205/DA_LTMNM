@@ -1,0 +1,290 @@
+{
+    "1": {
+        "id": 1,
+        "name": "Truyện Kiều",
+        "source": "https:\/\/tiki.vn\/nguyen-du-truyen-thuy-kieu-ban-dac-biet-bia-mem-tai-ban-p195961281.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_1_truyen_kieu.png",
+        "db_path": "sach-bia\/sach_1_truyen_kieu.png",
+        "size_kb": 1036.9,
+        "dim": "1200x1200"
+    },
+    "2": {
+        "id": 2,
+        "name": "Chí Phèo",
+        "source": "https:\/\/tiki.vn\/chi-pheo-hh-hh-p278321314.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_2_chi_pheo.png",
+        "db_path": "sach-bia\/sach_2_chi_pheo.png",
+        "size_kb": 249.8,
+        "dim": "500x500"
+    },
+    "3": {
+        "id": 3,
+        "name": "Lão Hạc",
+        "source": "https:\/\/tiki.vn\/nam-cao-lao-hac-tai-ban-p205802242.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_3_lao_hac.jpg",
+        "db_path": "sach-bia\/sach_3_lao_hac.jpg",
+        "size_kb": 39.2,
+        "dim": "600x600"
+    },
+    "4": {
+        "id": 4,
+        "name": "Đời thừa",
+        "source": "https:\/\/tiki.vn\/sach-doi-thua-nam-cao-sbooks-p274356733.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_4_doi_thua.jpeg",
+        "db_path": "sach-bia\/sach_4_doi_thua.jpeg",
+        "size_kb": 119.3,
+        "dim": "1280x1280"
+    },
+    "5": {
+        "id": 5,
+        "name": "Sống mòn",
+        "source": "https:\/\/tiki.vn\/sach-nam-cao-song-mon-bia-cung-tai-ban-p162100197.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_5_song_mon.jpg",
+        "db_path": "sach-bia\/sach_5_song_mon.jpg",
+        "size_kb": 193.8,
+        "dim": "900x900"
+    },
+    "6": {
+        "id": 6,
+        "name": "Dế Mèn phiêu lưu ký",
+        "source": "https:\/\/tiki.vn\/sach-de-men-phieu-luu-ky-dau-dua-minh-hoa-an-ban-ki-niem-100-nam-to-hoai-p68330624.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_6_de_men_phieu_luu_ky.jpg",
+        "db_path": "sach-bia\/sach_6_de_men_phieu_luu_ky.jpg",
+        "size_kb": 281.2,
+        "dim": "954x1280"
+    },
+    "7": {
+        "id": 7,
+        "name": "Vợ chồng A Phủ",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/59984375-v-ch-ng-a-ph-",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_7_vo_chong_a_phu.jpg",
+        "db_path": "sach-bia\/sach_7_vo_chong_a_phu.jpg",
+        "size_kb": 132.7,
+        "dim": "360x540"
+    },
+    "8": {
+        "id": 8,
+        "name": "O chuột",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/21523734-o-chuot",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_8_o_chuot.jpg",
+        "db_path": "sach-bia\/sach_8_o_chuot.jpg",
+        "size_kb": 12.9,
+        "dim": "180x180"
+    },
+    "9": {
+        "id": 9,
+        "name": "Cát bụi chân ai",
+        "source": "https:\/\/tiki.vn\/cat-bui-chan-ai-to-hoai-thao-nguyen-p277975957.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_9_cat_bui_chan_ai.jpg",
+        "db_path": "sach-bia\/sach_9_cat_bui_chan_ai.jpg",
+        "size_kb": 92.2,
+        "dim": "672x728"
+    },
+    "10": {
+        "id": 10,
+        "name": "Thơ thơ",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/22469995-th-th",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_10_tho_tho.jpg",
+        "db_path": "sach-bia\/sach_10_tho_tho.jpg",
+        "size_kb": 29.3,
+        "dim": "280x395"
+    },
+    "11": {
+        "id": 11,
+        "name": "Gửi hương cho gió",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/22469997-g-i-h-ng-cho-gi",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_11_gui_huong_cho_gio.jpg",
+        "db_path": "sach-bia\/sach_11_gui_huong_cho_gio.jpg",
+        "size_kb": 29,
+        "dim": "354x453"
+    },
+    "13": {
+        "id": 13,
+        "name": "Mắt biếc",
+        "source": "https:\/\/tiki.vn\/mat-biec-nguyen-nhat-anh-p266552447.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_13_mat_biec.jpg",
+        "db_path": "sach-bia\/sach_13_mat_biec.jpg",
+        "size_kb": 184.6,
+        "dim": "1250x1910"
+    },
+    "14": {
+        "id": 14,
+        "name": "Cô gái đến từ hôm qua",
+        "source": "https:\/\/tiki.vn\/sach-co-gai-den-tu-hom-qua-phien-ban-dac-biet-nguyen-nhat-anh-p277938215.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_14_co_gai_den_tu_hom_qua.jpg",
+        "db_path": "sach-bia\/sach_14_co_gai_den_tu_hom_qua.jpg",
+        "size_kb": 452.8,
+        "dim": "798x1017"
+    },
+    "15": {
+        "id": 15,
+        "name": "Kính vạn hoa",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/17826150-k-nh-v-n-hoa",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_15_kinh_van_hoa.jpg",
+        "db_path": "sach-bia\/sach_15_kinh_van_hoa.jpg",
+        "size_kb": 73.6,
+        "dim": "318x347"
+    },
+    "16": {
+        "id": 16,
+        "name": "Cho tôi xin một vé đi tuổi thơ",
+        "source": "https:\/\/tiki.vn\/truyen-cua-nguyen-nhat-anh-cho-toi-xin-mot-ve-di-tuoi-tho-p271199948.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_16_cho_toi_xin_mot_ve_di_tuoi_tho.jpg",
+        "db_path": "sach-bia\/sach_16_cho_toi_xin_mot_ve_di_tuoi_tho.jpg",
+        "size_kb": 65.3,
+        "dim": "800x1262"
+    },
+    "17": {
+        "id": 17,
+        "name": "Tôi thấy hoa vàng trên cỏ xanh",
+        "source": "https:\/\/tiki.vn\/toi-thay-hoa-vang-tren-co-xanh-top-nhung-cuon-sach-ban-chay-cua-nguyen-nhat-anh-tang-kem-postcard-green-life-p33645200.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_17_toi_thay_hoa_vang_tren_co_xanh.jpg",
+        "db_path": "sach-bia\/sach_17_toi_thay_hoa_vang_tren_co_xanh.jpg",
+        "size_kb": 232.1,
+        "dim": "1200x1200"
+    },
+    "18": {
+        "id": 18,
+        "name": "Ngồi khóc trên cây",
+        "source": "https:\/\/tiki.vn\/nguyen-nhat-anh-ngoi-khoc-tren-cay-in-lan-thu-29-p278610389.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_18_ngoi_khoc_tren_cay.png",
+        "db_path": "sach-bia\/sach_18_ngoi_khoc_tren_cay.png",
+        "size_kb": 161.3,
+        "dim": "600x600"
+    },
+    "19": {
+        "id": 19,
+        "name": "Con chó nhỏ mang giỏ hoa hồng",
+        "source": "https:\/\/tiki.vn\/sach-con-cho-nho-mang-gio-hoa-hong-nguyen-nhat-anh-p129138393.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_19_con_cho_nho_mang_gio_hoa_hong.jpg",
+        "db_path": "sach-bia\/sach_19_con_cho_nho_mang_gio_hoa_hong.jpg",
+        "size_kb": 59.2,
+        "dim": "780x780"
+    },
+    "22": {
+        "id": 22,
+        "name": "Số Đỏ",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/15847487-s-đỏ",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_22_so_do.jpg",
+        "db_path": "sach-bia\/sach_22_so_do.jpg",
+        "size_kb": 220.4,
+        "dim": "1504x2112"
+    },
+    "23": {
+        "id": 23,
+        "name": "Giông Tố",
+        "source": "https:\/\/tiki.vn\/giong-to-vu-trong-phung-p263563188.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_23_giong_to.jpg",
+        "db_path": "sach-bia\/sach_23_giong_to.jpg",
+        "size_kb": 44.3,
+        "dim": "600x600"
+    },
+    "24": {
+        "id": 24,
+        "name": "Tắt Đèn",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/13147425-t-t-den",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_24_tat_den.jpg",
+        "db_path": "sach-bia\/sach_24_tat_den.jpg",
+        "size_kb": 271.9,
+        "dim": "703x1000"
+    },
+    "25": {
+        "id": 25,
+        "name": "Gió đầu mùa",
+        "source": "https:\/\/tiki.vn\/sach-gio-lanh-dau-mua-bia-mem-thach-lam-minh-thang-p277429417.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_25_gio_dau_mua.jpg",
+        "db_path": "sach-bia\/sach_25_gio_dau_mua.jpg",
+        "size_kb": 51.7,
+        "dim": "708x708"
+    },
+    "26": {
+        "id": 26,
+        "name": "Hà Nội băm sáu phố phường",
+        "source": "https:\/\/tiki.vn\/ha-noi-bam-sau-pho-phuong-tu-sach-van-hoc-trong-nha-truong-thach-lam-kim-dong-p278600448.html",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_26_ha_noi_bam_sau_pho_phuong.jpg",
+        "db_path": "sach-bia\/sach_26_ha_noi_bam_sau_pho_phuong.jpg",
+        "size_kb": 80.4,
+        "dim": "600x600"
+    },
+    "27": {
+        "id": 27,
+        "name": "Đắc Nhân Tâm",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/56855059-c-nh-n-t-m",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_27_dac_nhan_tam.jpg",
+        "db_path": "sach-bia\/sach_27_dac_nhan_tam.jpg",
+        "size_kb": 247.8,
+        "dim": "1587x2525"
+    },
+    "28": {
+        "id": 28,
+        "name": "Quẳng gánh lo đi và vui sống",
+        "source": "https:\/\/openlibrary.org\/works\/OL1963054W\/How_to_Stop_Worrying_and_Start_Living",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_28_quang_ganh_lo_di.jpg",
+        "db_path": "sach-bia\/sach_28_quang_ganh_lo_di.jpg",
+        "size_kb": 58.3,
+        "dim": "354x500"
+    },
+    "29": {
+        "id": 29,
+        "name": "Rừng Na Uy",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/12134351",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_29_rung_na_uy.jpg",
+        "db_path": "sach-bia\/sach_29_rung_na_uy.jpg",
+        "size_kb": 73,
+        "dim": "445x707"
+    },
+    "30": {
+        "id": 30,
+        "name": "Kafka bên bờ biển",
+        "source": "https:\/\/www.goodreads.com\/book\/show\/12009048",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_30_kafka_ben_bo_bien.jpg",
+        "db_path": "sach-bia\/sach_30_kafka_ben_bo_bien.jpg",
+        "size_kb": 42.7,
+        "dim": "308x475"
+    },
+    "31": {
+        "id": 31,
+        "name": "Hoàng tử bé",
+        "source": "https:\/\/openlibrary.org\/works\/OL15183344W\/The_Little_Prince",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_31_hoang_tu_be.jpg",
+        "db_path": "sach-bia\/sach_31_hoang_tu_be.jpg",
+        "size_kb": 42.9,
+        "dim": "487x500"
+    },
+    "32": {
+        "id": 32,
+        "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "source": "https:\/\/openlibrary.org\/works\/OL15157143W\/Clean_Code",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_32_clean_code.jpg",
+        "db_path": "sach-bia\/sach_32_clean_code.jpg",
+        "size_kb": 29,
+        "dim": "300x397"
+    },
+    "33": {
+        "id": 33,
+        "name": "Clean Architecture: A Craftsman's Guide",
+        "source": "https:\/\/openlibrary.org\/works\/OL17855018W\/Clean_Architecture",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_33_clean_architecture.jpg",
+        "db_path": "sach-bia\/sach_33_clean_architecture.jpg",
+        "size_kb": 32.6,
+        "dim": "353x500"
+    },
+    "34": {
+        "id": 34,
+        "name": "Sapiens: Lược sử loài người",
+        "source": "https:\/\/openlibrary.org\/works\/OL17075727W\/Sapiens",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_34_sapiens_luoc_su_loai_nguoi.jpg",
+        "db_path": "sach-bia\/sach_34_sapiens_luoc_su_loai_nguoi.jpg",
+        "size_kb": 34.1,
+        "dim": "326x500"
+    },
+    "35": {
+        "id": 35,
+        "name": "Homo Deus: Lược sử tương lai",
+        "source": "https:\/\/openlibrary.org\/works\/OL17358784W\/Homo_Deus",
+        "abs_path": "C:\\Users\\USER\\Desktop\\DA_PHP\\storage\\app\\public\\sach-bia\\sach_35_homo_deus.jpg",
+        "db_path": "sach-bia\/sach_35_homo_deus.jpg",
+        "size_kb": 48.7,
+        "dim": "362x500"
+    }
+}
